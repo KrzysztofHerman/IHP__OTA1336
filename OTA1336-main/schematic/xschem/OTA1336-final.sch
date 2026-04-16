@@ -149,7 +149,7 @@ C {iopin.sym} 1740 -1000 0 0 {name=p8 lab=vout}
 C {sg13g2_pr/sg13_lv_pmos.sym} 1030 -1290 0 1 {name=M9
 l=2.08u
 w=75u
-ng=8
+ng=9
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
@@ -166,22 +166,22 @@ C {lab_pin.sym} 1835 -1385 0 1 {name=p36 sig_type=std_logic lab=well}
 C {sg13g2_pr/ntap1.sym} 1835 -1330 2 0 {name=R6
 model=ntap1
 spiceprefix=X
-w=20.78e-6
-l=20.78e-6
+w=0.725812e-6
+l=89.914188e-6
 }
 C {lab_pin.sym} 1560 -1190 0 0 {name=p51 sig_type=std_logic lab=vdd}
 C {sg13g2_pr/ptap1.sym} 1400 -555 0 0 {name=R5
 model=ptap1
 spiceprefix=X
-w=10e-6
-l=1.0e-6
+w=0.735425e-6
+l=30.304575e-6
 }
 C {lab_pin.sym} 1400 -490 0 1 {name=p34 sig_type=std_logic lab=sub!}
 C {sg13g2_pr/ptap1.sym} 1700 -555 0 0 {name=R7
 model=ptap1
 spiceprefix=X
-w=10e-6
-l=1.0e-6
+w=0.321008e-6
+l=101.888992e-6
 }
 C {lab_pin.sym} 1700 -490 0 1 {name=p44 sig_type=std_logic lab=sub!}
 C {lab_pin.sym} 1760 -1290 0 1 {name=p2 sig_type=std_logic lab=well}
@@ -192,7 +192,7 @@ C {lab_pin.sym} 1740 -700 0 1 {name=p9 sig_type=std_logic lab=sub!}
 C {sg13g2_pr/ntap1.sym} 1560 -1140 0 0 {name=R1
 model=ntap1
 spiceprefix=X
-w=178e-6
-l=178e-6
+w=0.739264e-6
+l=27.630736e-6
 }
 C {diff_pair.sym} 1400 -990 0 0 {name=x1}

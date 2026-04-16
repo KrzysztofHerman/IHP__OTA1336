@@ -160,8 +160,8 @@ spiceprefix=X
 C {sg13g2_pr/ntap1.sym} 730 -830 0 0 {name=R1
 model=ntap1
 spiceprefix=X
-w=13e-6
-l=34e-6
+w=0.3614421e-6
+l=91.558579e-6
 }
 C {lab_pin.sym} 730 -765 0 1 {name=p28 sig_type=std_logic lab=b}
 C {sg13g2_pr/sg13_lv_pmos.sym} 1160 -970 0 0 {name=M8
