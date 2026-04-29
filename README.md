@@ -9,9 +9,9 @@ A Miller transconductance amplifier example.
 
 1. Two-stage Miller OTA schematic with PMOS differential pair and bias current source.
 
-![OTA1336 basic two-stage Miller OTA schematic](./doc/two_stage_miller_ota_pmos.svg)
+![OTA1336 basic two-stage Miller OTA schematic](./doc/two_stage_miller_ota_pmos.png)
 
-[Open SVG directly](./doc/two_stage_miller_ota_pmos.svg)
+[Open PNG directly](./doc/two_stage_miller_ota_pmos.png)
 
 ## Symbol and Schematic Conventions
 
