@@ -15,14 +15,21 @@
   <defs
      id="defs6" />
   <sodipodi:namedview
-     id="namedview4"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1" />
+      id="namedview4"
+      pagecolor="#ffffff"
+      bordercolor="#000000"
+      borderopacity="0.25"
+      inkscape:showpageshadow="2"
+      inkscape:pageopacity="0.0"
+      inkscape:pagecheckerboard="0"
+      inkscape:deskcolor="#d1d1d1" />
+  <rect
+     x="0"
+     y="0"
+     width="703.03357"
+     height="387.31921"
+     style="fill:#ffffff;fill-opacity:1;stroke:none"
+     id="background" />
   <g
      id="g8"
      inkscape:groupmode="layer"
