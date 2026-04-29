@@ -149,7 +149,7 @@ C {iopin.sym} 1740 -1000 0 0 {name=p8 lab=vout}
 C {sg13g2_pr/sg13_lv_pmos.sym} 1030 -1290 0 1 {name=M9
 l=2.08u
 w=75u
-ng=9
+ng=8
 m=1
 model=sg13_lv_pmos
 spiceprefix=X

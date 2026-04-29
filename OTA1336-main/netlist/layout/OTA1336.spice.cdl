@@ -6,7 +6,7 @@ MM3 net1 net1 vss sub! sg13_lv_nmos w=720n l=9.75u ng=1 m=1
 MM5 net3 iout vdd net4 sg13_lv_pmos w=5.3u l=1.95u ng=1 m=1
 MM7 vout iout vdd well sg13_lv_pmos w=75u l=2.08u ng=8 m=1
 MM6 vout net2 vss sub! sg13_lv_nmos w=28.8u l=9.75u ng=4 m=1
-MM9 iout iout vdd well sg13_lv_pmos w=75u l=2.08u ng=9 m=1
+MM9 iout iout vdd well sg13_lv_pmos w=75u l=2.08u ng=8 m=1
 CC2 net2 vout cap_cmim w=22.295e-6 l=22.295e-6 m=1
 RR6 vdd well ntap1 A=6.52608e-11 P=0.00018128
 RR5 vss sub! ptap1 A=2.228674e-11 P=6.208e-05
