@@ -1,1 +1,1 @@
-OTA1336-final.sch
+OTA1336-basic.sch
