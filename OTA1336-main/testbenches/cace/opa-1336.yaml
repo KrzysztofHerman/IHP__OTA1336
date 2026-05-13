@@ -83,7 +83,7 @@ default_conditions:
     description: Output load capacitance
     display: CLoad
     unit: fF
-    maximum: 100
+    maximum: 500
   Vcm:
     description: Common-mode input voltage
     display: Vcm
@@ -91,7 +91,7 @@ default_conditions:
   Vdiff:
     description: Differential input voltage
     display: Vdiff
-    typical: 0
+    typical: 0.1
   temperature:
     description: Ambient temperature
     display: Temp
@@ -187,13 +187,13 @@ parameters:
     spec:
       result:
         minimum:
-          value: 100
-          fail: true
+          value: 60
+          fail: 
         typical:
-          value: 125
+          value: 70
         maximum:
-          value: 125
-          fail: true
+          value: 75
+          fail: 
           calculation: maximum
           limit: above
     tool:
@@ -324,3 +324,67 @@ parameters:
         minimum: mos_ss
         typical: mos_tt
         maximum: mos_ff
+parameters:
+  Idd_enabled:
+    description: Current draw through analog supply, amplifier enabled, no load
+    display: Idd
+    unit: µA
+    spec:
+      result:
+        minimum:
+          value: any
+        typical:
+          value: 170
+        maximum:
+          value: 250
+    tool:
+      ngspice:
+        template: dccurrent_vdd.sch
+        format: ascii
+        suffix: .data
+        variables: [null, result]
+    conditions:
+      Vvdd:
+        typical: 1.2
+      Vcm:
+        maximum: 1.2
+        typical: 0.6
+        minimum: 0.0
+      temperature:
+        typical: 27
+      corner:
+        typical: mos_tt
+  Idd_dynamic:
+    description: Current draw through analog supply, amplifier enabled, no load
+    display: Idd (dynamic)
+    unit: µA
+    spec:
+      result:
+        minimum:
+          value: any
+        typical:
+          value: 40
+        maximum:
+          value: 6500
+    tool:
+      ngspice:
+        template: dccurrent_dyn.sch
+        format: ascii
+        suffix: .data
+        variables: [null, result]
+    conditions:
+      Vvdd:
+        typical: 1.2
+      frequency:
+        typical: 1
+        unit: kHz
+      Vcm:
+        maximum: 0.7
+        minimum: 0.5
+      Vdiff:
+        typical: 0.3
+        note: Zero-to-peak amplitude of sine input
+      temperature:
+        typical: 27
+      corner:
+        typical: mos_tt

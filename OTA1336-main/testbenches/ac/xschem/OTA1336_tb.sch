@@ -35,13 +35,14 @@ autoload=0
 
 sim_type=ac
 
-y2=-0.042
-y1=-160
-color="4 4"
-node=ph(vout)
-x2=7}
+y2=310
+y1=-180
+color="4 6"
+node="ph(vout)
+vph"
+x2=8}
 B 2 880 -1750 1680 -1350 {flags=graph
-y1=-8.7
+y1=-31
 y2=71
 ypos1=0
 ypos2=2
@@ -58,7 +59,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-x2=7
+x2=8
 sim_type=ac
 hilight_wave=0
 color="6 4"
@@ -229,12 +230,29 @@ write tb_OTA_op.raw
 
 .control
 op
-ac dec 100 1 10e6 
+ac dec 100 1 10e7 
 save all
 let Av = db(v(vout) / v(vp))
+let vph = -180*unwrap(phase(V(vout)) - phase(V(vp)))/pi
 let PSRR_linear = v(vout2)/v(VDDac)
 let CMRR = db((v(vout)/v(vp))/(v(vout1)/v(vp)))
 let phase = 180*cph(vout)/pi
+
+let vog = db(V(vout)/V(vp))
+let vph = 180 * unwrap(phase(V(vout)) - phase(V(vp)))/pi
+let fbw = 0
+let pm = 0
+let gm = minimum(vog)
+meas ac fbw WHEN vog=1 FALL=1
+meas ac pm FIND vph WHEN vog=0 FALL=1
+meas ac gm FIND vog WHEN vph=-180 FALL=1
+
+let gainbw = $&fbw
+let gmargin = $&gm
+let pmargin = 180 + $&pm
+
+print gainbw gmargin pmargin
+
 write output_file.raw 
 .endc
 "}
