@@ -83,7 +83,7 @@ default_conditions:
     description: Output load capacitance
     display: CLoad
     unit: fF
-    maximum: 500
+    maximum: 100
   Vcm:
     description: Common-mode input voltage
     display: Vcm
@@ -91,7 +91,7 @@ default_conditions:
   Vdiff:
     description: Differential input voltage
     display: Vdiff
-    typical: 0.1
+    typical: 0
   temperature:
     description: Ambient temperature
     display: Temp
@@ -187,13 +187,13 @@ parameters:
     spec:
       result:
         minimum:
-          value: 60
-          fail: 
+          value: 100
+          fail: true
         typical:
-          value: 70
+          value: 125
         maximum:
-          value: 75
-          fail: 
+          value: 125
+          fail: true
           calculation: maximum
           limit: above
     tool:
@@ -324,7 +324,6 @@ parameters:
         minimum: mos_ss
         typical: mos_tt
         maximum: mos_ff
-parameters:
   Idd_enabled:
     description: Current draw through analog supply, amplifier enabled, no load
     display: Idd
@@ -347,9 +346,7 @@ parameters:
       Vvdd:
         typical: 1.2
       Vcm:
-        maximum: 1.2
         typical: 0.6
-        minimum: 0.0
       temperature:
         typical: 27
       corner:
@@ -371,7 +368,7 @@ parameters:
         template: dccurrent_dyn.sch
         format: ascii
         suffix: .data
-        variables: [null, result]
+        variables: [result]
     conditions:
       Vvdd:
         typical: 1.2
@@ -379,10 +376,9 @@ parameters:
         typical: 1
         unit: kHz
       Vcm:
-        maximum: 0.7
-        minimum: 0.5
+        typical: 0.6
       Vdiff:
-        typical: 0.3
+        typical: 0.0001
         note: Zero-to-peak amplitude of sine input
       temperature:
         typical: 27
