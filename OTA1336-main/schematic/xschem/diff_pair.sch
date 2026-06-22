@@ -141,6 +141,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -154,6 +155,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -169,6 +171,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -179,6 +182,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -187,6 +191,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -195,6 +200,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -203,6 +209,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -211,6 +218,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -219,6 +227,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -227,6 +236,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -235,6 +245,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -243,6 +254,7 @@ l=3.7u
 w=3.64u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }

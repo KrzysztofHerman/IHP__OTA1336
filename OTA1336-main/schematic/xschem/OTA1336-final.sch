@@ -105,6 +105,7 @@ l=9.75u
 w=720n
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_nmos
 spiceprefix=X
 }
@@ -113,6 +114,7 @@ l=9.75u
 w=720n
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_nmos
 spiceprefix=X
 }
@@ -121,6 +123,7 @@ l=1.95u
 w=5.3u
 ng=1
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -129,6 +132,7 @@ l=2.08u
 w=75u
 ng=8
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -137,6 +141,7 @@ l=9.75u
 w=28.8u
 ng=4
 m=1
+mm_ok=0
 model=sg13_lv_nmos
 spiceprefix=X
 }
@@ -151,6 +156,7 @@ l=2.08u
 w=75u
 ng=8
 m=1
+mm_ok=0
 model=sg13_lv_pmos
 spiceprefix=X
 }

@@ -3,7 +3,7 @@
 #--------------------------------------------------------------
 
 name: OTA1336
-description: Miller amplifier
+description: Two stage Miller amplifier
 PDK: ihp-sg13g2
 cace_format: 5.2
 
@@ -117,7 +117,7 @@ parameters:
   offset_error:
     description: Output offset error
     display: Offset Error
-    unit: "uV"
+    unit: "mV"
     spec:
       result:
         minimum:
@@ -384,3 +384,177 @@ parameters:
         typical: 27
       corner:
         typical: mos_tt
+  equiv_noise:
+    description: Equivalent Output Noise Voltage from 1 Hz - 10 MHzz
+    display: Equivalent Output Noise Voltage from 1 Hz to 10 MHz 
+    unit: uV
+    spec:
+      result:
+        minimum:
+          value: any
+        typical:
+          value: 280
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: eqvnoise.sch
+        format: ascii
+        suffix: .data
+        variables: [result]
+    conditions:
+      Vvdd:
+        typical: 1.2
+      frequency:
+        typical: 1
+        unit: Hz
+      temperature:
+        maximum: 110
+        typical: 27
+        minimum: -40
+      corner:
+        minimum: mos_ss
+        typical: mos_tt
+        maximum: mos_ff
+  offset_error:
+    description: Output offset error
+    display: Offset Error
+    unit: "uV"
+    spec:
+      result:
+        minimum:
+          value: any
+          fail: 
+        typical:
+          value: any
+        maximum:
+          value: 500
+          fail: yes
+    tool:
+      ngspice:
+        template: input_offset.sch
+        format: ascii
+        suffix: .data
+        variables: [result, null]
+    conditions:
+      Vvdd:
+        typical: 1.2
+      temperature:
+        maximum: 110
+        typical: 27
+        minimum: -40
+      risetime:
+        display: Trise
+        unit: ms
+        typical: 50
+        note: Ramp rate of Vdiff for input offset measurement
+      corner:
+        minimum: mos_ss
+        typical: mos_tt
+        maximum: mos_ff
+  psrr:
+    description: PSRR at defined frequency 
+    display: PSRR at given frequency
+    unit: dB
+    spec:
+      result:
+        maximum:
+          value: any
+          fail: any
+        typical: 
+          value: 40
+        minimum:
+          value: 35
+    tool:
+      ngspice:
+        template: psrr.sch
+        format: ascii
+        suffix: .data
+        variables: [result]
+    conditions:
+      Vvdd:
+        maximum: 1.2
+        note: Measured with 0.5V p-p signal on power supply
+      temperature:
+        maximum: 110
+        typical: 27
+        minimum: -40
+      Vcmp:
+        typical: 0.6
+        note: Common voltage
+      frequency:
+        typical: 100k
+        note: Evaluation frequency
+      corner:
+        minimum: mos_ss
+        typical: mos_tt
+        maximum: mos_ff
+  overshoot:
+    description: Small signal overshoot 
+    display: Small signal overshoot
+    unit: \%
+    spec:
+      result:
+        maximum: 
+          value: 2
+          fail: 
+        typical:
+          value: 1
+        minimum:
+          value: any
+    tool:
+      ngspice:
+        template: overshoot.sch
+        format: ascii
+        suffix: .data
+        variables: [result]
+    conditions:
+      Vvdd:
+        maximum: 1.2
+      temperature:
+        maximum: 110
+        typical: 27
+        minimum: -40
+      Vcmp:
+        typical: 0.6
+        note: Common voltage
+      corner:
+        minimum: mos_ss
+        typical: mos_tt
+        maximum: mos_ff
+  slewrate:
+    description: Slew rate 
+    display: Slew rate
+    unit: 
+    spec:
+      result:
+        maximum: 
+          value: 
+          fail: 
+        typical:
+          value: 3
+        minimum:
+          value: 2
+    tool:
+      ngspice:
+        template: slewrate.sch
+        format: ascii
+        suffix: .data
+        variables: [result]
+    conditions:
+      Vvdd:
+        maximum: 1.2
+      temperature:
+        maximum: 110
+        typical: 27
+        minimum: -40
+      Vcmp:
+        typical: 0.6
+        note: Common voltage
+      ampl:
+        typical: 0.250
+        note: input signal amplitude
+      corner:
+        minimum: mos_ss
+        typical: mos_tt
+        maximum: mos_ff
