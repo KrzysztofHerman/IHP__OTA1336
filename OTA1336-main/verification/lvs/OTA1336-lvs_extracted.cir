@@ -1,0 +1,31 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 14/10/2026 04:14
+
+.SUBCKT OTA1336 Iout V+ V\x2d VDD VOUT VSS
+M$1 VSS \$20 \$20 \$1 sg13_lv_nmos L=9.75u W=0.72u AS=0.2484p AD=0.2448p
++ PS=2.13u PD=2.12u rfmode=0
+M$2 VSS \$20 \$3 \$1 sg13_lv_nmos L=9.75u W=0.72u AS=0.2448p AD=0.2448p
++ PS=2.12u PD=2.12u rfmode=0
+M$3 VSS \$3 VOUT \$1 sg13_lv_nmos L=9.75u W=28.8u AS=6.552p AD=6.552p PS=37.82u
++ PD=37.82u rfmode=0
+M$7 VDD VDD \$30 \$26 sg13_lv_pmos L=3.7u W=14.56u AS=4.9504p AD=4.9504p
++ PS=31.84u PD=31.84u rfmode=0
+M$8 \$3 VDD VDD \$26 sg13_lv_pmos L=3.7u W=7.28u AS=2.4752p AD=2.4752p
++ PS=15.92u PD=15.92u rfmode=0
+M$9 \$30 V+ \$3 \$26 sg13_lv_pmos L=3.7u W=7.28u AS=2.4752p AD=2.4752p
++ PS=15.92u PD=15.92u rfmode=0
+M$11 VDD Iout Iout \$8 sg13_lv_pmos L=2.08u W=75u AS=15.65625p AD=15.65625p
++ PS=87.715u PD=87.715u rfmode=0
+M$19 \$30 V\x2d \$20 \$26 sg13_lv_pmos L=3.7u W=7.28u AS=2.4752p AD=2.4752p
++ PS=15.92u PD=15.92u rfmode=0
+M$23 VDD Iout VOUT \$8 sg13_lv_pmos L=2.08u W=75u AS=15.65625p AD=15.65625p
++ PS=87.715u PD=87.715u rfmode=0
+M$31 \$20 VDD VDD \$26 sg13_lv_pmos L=3.7u W=7.28u AS=2.4752p AD=2.4752p
++ PS=15.92u PD=15.92u rfmode=0
+M$32 \$30 Iout VDD \$15 sg13_lv_pmos L=1.95u W=5.3u AS=1.802p AD=1.802p
++ PS=11.28u PD=11.28u rfmode=0
+C$36 \$3 VOUT cap_cmim w=22.295u l=22.295u A=497.067025p P=89.18u m=1
+R$37 VDD \$8 ntap1 A=65.2608p P=181.28u
+R$38 VDD \$15 ntap1 A=20.4264p P=56.74u
+R$39 VDD \$26 ntap1 A=33.0912p P=183.84u
+R$40 VSS \$1 ptap1 A=55.056p P=266.5u
+.ENDS OTA1336
